@@ -1,6 +1,6 @@
-var Odoo = require('../lib/index');
+const Odoo = require('../lib/index');
 
-var odoo = new Odoo({
+const odoo = new Odoo({
     url: '<insert server URL>',
     port: '<insert server port default 80>',
     db: '<insert database name>',
@@ -29,3 +29,15 @@ odoo.connect(function (err) {
         });
     });
 });
+
+async function read_records() {
+    try {
+        const uid = await odoo.promise_connect()
+        console.log(`Connected to odoo with UID ${uid}`)
+        let result = await odoo.promise_execute_kw('res.partner', 'search_read', [[['is_company', '=', true], ['customer', '=', true]], 0, 1])
+
+        console.log(`result: ${result}`)
+    } catch (e) {
+        console.error(e)
+    }
+}

@@ -1,6 +1,6 @@
-var Odoo = require('../lib/index');
+const Odoo = require('../lib/index');
 
-var odoo = new Odoo({
+const odoo = new Odoo({
     url: '<insert server URL>',
     port: '<insert server port default 80>',
     db: '<insert database name>',
@@ -34,3 +34,20 @@ odoo.connect(function (err) {
         console.log('Result: ', value);
     });
 });
+
+async function inspection_and_introspection() {
+    try {
+        const uid = await odoo.promise_connect()
+        console.log(`Connected to odoo with UID ${uid}`)
+        let result = await odoo.promise_execute_kw('ir.model', 'create', [{'name': 'Custom Model',
+            'model': 'x_custom_model',
+            'state': 'manual'
+        }])
+        console.log(`created model: ${result}`)
+
+        result = await odoo.promise_execute_kw('x_custom_model', 'fields_get', [], {attributes: ['string', 'help', 'type']})
+        console.log(result)
+    } catch(e){
+        console.error(e)
+    }
+}

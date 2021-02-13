@@ -21,13 +21,13 @@ $ npm install odoo-xmlrpc
 ## Usage
 
 ```js
-var Odoo = require('odoo-xmlrpc');
+const Odoo = require('odoo-xmlrpc');
 ```
 
 ### Configuration
 
 ```js
-var odoo = new Odoo({
+const odoo = new Odoo({
     url: <insert server URL>,
     port: <insert server Port (by default 80)>,
     db: <insert database name>,

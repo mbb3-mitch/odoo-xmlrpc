@@ -1,18 +1,26 @@
 {
-  "name": "odoo-xmlrpc",
-  "version": "1.0.7",
-  "description": "Nodejs client to call Odoo RPC's through xmlrpc library.",
-  "author": {
-    "name": "Faisal Sami",
-    "email": "faisalsami78@gmail.com"
-  },
+  "name": "odoo-xmlrpc-promise",
+  "version": "1.0.0",
+  "description": "Nodejs client to call Odoo RPC's through xmlrpc library implemented with promises.",
+  "contributors": [
+    {
+      "name": "Faisal Sami",
+      "email": "faisalsami78@gmail.com"
+    },
+    {
+      "name": "Mitchell Burr Bedard",
+      "email": "m.burrbedard@gmail.com",
+    }
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/faisalsami/odoo-xmlrpc"
+    "url": "https://github.com/mbb3-mitch/odoo-xmlrpc-promise"
   },
-  "homepage": "https://github.com/faisalsami/odoo-xmlrpc",
-  "bugs": "https://github.com/faisalsami/odoo-xmlrpc/issues",
-  "readme": "https://github.com/faisalsami/odoo-xmlrpc/blob/master/README.md",
+  "homepage": "https://github.com/mbb3-mitch/odoo-xmlrpc-promise",
+  "bugs": {
+    "url": "https://github.com/mbb3-mitch/odoo-xmlrpc-promise/issues"
+  },
+  "readme": "https://github.com/mbb3-mitch/odoo-xmlrpc-promise/blob/master/README.md",
   "directories": {
     "lib": "./lib/"
   },
@@ -22,27 +30,20 @@
     "npm": ">=1.0.0"
   },
   "dependencies": {
-    "xmlrpc": "^1.3.1",
-    "url": "*"
+    "url": "*",
+    "xmlrpc": "^1.3.1"
   },
   "license": "Apache-2.0",
   "scripts": {},
   "keywords": [
     "odoo",
-    "xmlrpc"
+    "xmlrpc",
+    "promise"
   ],
-  "bugs": {
-    "url": "https://github.com/faisalsami/odoo-xmlrpc/issues"
-  },
-  "homepage": "https://github.com/faisalsami/odoo-xmlrpc",
   "_npmUser": {
-    "name": "faisalsami",
-    "email": "faisalsami78@gmail.com"
+    "name": "mbb3-mitch",
+    "email": "m.burrbedard@gmail.com"
   },
   "maintainers": [
-    {
-      "name": "faisalsami",
-      "email": "faisalsami78@gmail.com"
-    }
   ]
 }
